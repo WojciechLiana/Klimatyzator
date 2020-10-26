@@ -1,0 +1,249 @@
+@import "custom-variables";
+
+$bg-blue-gradient: linear-gradient(-90deg, #1ad6fd 0%, #1d62f0 100%);
+
+@mixin gradient-line($width, $height) {
+  height: $height;
+  width: $width;
+  background-image: $bg-blue-gradient;
+}
+
+@mixin font($weight, $size){
+  font-weight: $weight;
+  font-size: $size;
+  font-family: "Poppins", sans-serif;
+}
+
+.nav-item {
+  width: 144px;
+  height: 140px;
+}
+
+.nav-link:hover {
+  border-radius: 30px;
+}
+
+.form__background {
+  opacity: 0.3;
+  top: -2px;
+  left: -100vw;
+  width: 200vw;
+  height: 1000vh;
+  z-index: -1;
+}
+
+@media only screen and (max-width: 992px) {
+  .nav-item {
+    height: 50px;
+  }
+}
+
+.dropdown-menu {
+  min-width: 300px;
+  left: -140px;
+}
+
+.navbar__submit-btn {
+  width: 150px;
+  filter: drop-shadow(0px 10px 11.5px rgba(27, 160, 247, 0.5));
+  background-image: $bg-blue-gradient;
+}
+
+.article__title--blue-label {
+  @include font(400, 18px);
+}
+
+.article__title--black-label {
+  @include font(600, 68px);
+}
+
+.contact-us {
+  background-image: $bg-blue-gradient;
+}
+
+.contact-us__image-label {
+  top: calc(-115px - 8vw);
+}
+
+.contact-us__label {
+  @include font(600, 25px);
+}
+
+.contact-us__input {
+  @include font(600, 20px);
+  height: 60px;
+  max-width: 216px;
+}
+
+.contact-us__input--phone {
+  @include font(600, 24px);
+  background-image: linear-gradient(270deg, #ff7200 0%, #ff9d00 100%);
+}
+
+.contact-us__input--email {
+  @include font(400, 18px);
+}
+
+.about-company__underline {
+  @include gradient-line(100%, 3px);
+}
+
+.card-title,
+.card-number{
+  @include font(600, 20px);
+}
+
+.how-we-do__underline {
+  @include gradient-line(100%, 2px)
+}
+
+.offer__btn .btn-link {
+  background-color: #ffffff;
+  color: #000000;
+  font-size: 30px;
+  z-index: 1;
+}
+
+.offer__btn .btn-link:not(.collapsed):after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  background-image: $bg-blue-gradient;
+  height: 10px;
+  top: 67px;
+  left: 0;
+  z-index: 2;
+  border-top: 7px solid #ffffff;
+}
+
+.offer__btn .btn-link:not(.collapsed):before {
+  content: "";
+  position: absolute;
+  width: 14px;
+  background-image: $bg-blue-gradient;
+  transform: rotate(45deg);
+  height: 14px;
+  left: 50%;
+  top: 70px;
+  z-index: 1;
+}
+
+.offer__btn .collapsed {
+  background-color: $primary;
+  color: $secondary;
+  @include font(400, 30px);
+}
+
+.offer__button {
+  width: 241px;
+  height: 60px;
+  filter: drop-shadow(0px 10px 11.5px rgba(27,160,247,0.5));
+  background-image: $bg-blue-gradient;
+}
+
+.offer__underline {
+  @include gradient-line(100%, 2px);
+}
+
+.numbers__image {
+  max-width: 150px;
+}
+
+.numbers__amount {
+  @include font(600, 70px);
+}
+
+.numbers__label {
+  @include font(400, 20px);
+}
+
+.clients__opinion {
+  max-width: 400px;
+}
+
+.clients__person {
+  max-width: 180px;
+}
+
+.clients__opinion:before {
+  position: absolute;
+  content: "\201D";
+  display: block;
+  width: 51px;
+  height: 51px;
+  border-radius: 26px;
+  filter: drop-shadow(0px 3px 11.5px rgba(27, 170, 248, 0.27));
+  background-color: $info;
+  color: #ffffff;
+  line-height: 80px;
+  font-size: 80px;
+  font-style: italic;
+  left: -26px;
+  top: 26px;
+  padding-left: 5px;
+}
+
+.footer__item {
+  max-width: 350px;
+}
+
+.footer__link::before {
+  position: absolute;
+  content: "o";
+  font-size: 13px;
+  color: $info;
+  left: 0;
+}
+
+.find-us:after {
+  content: "f";
+  margin-left: 20px;
+  position: absolute;
+  width: 36px;
+  height: 36px;
+  border-radius: 18px;
+  background-color: #3a5c9a;
+  top: -5px;
+  color: #ffffff;
+  text-align: center;
+  font-size: 30px;
+  font-weight: bolder;
+}
+
+.modal__big-price {
+  @include font(400, 20px);
+}
+
+.modal__model {
+  @include font(600, 25px);
+}
+
+.modal__promo-price {
+  @include font(600, 30px);
+}
+
+.modal-title {
+  @include font(600, 25px);
+}
+
+.modal__underline {
+  width: 300px;
+  height: 8px;
+  background-image: linear-gradient(268deg, #ff7200 0%, #ffb100 100%);
+}
+
+.carousel-control-next,
+.carousel-control-prev,
+.carousel-indicators {
+  filter: invert(100%);
+}
+
+.hr-line--footer,
+.hr-line--title {
+  @include gradient-line(100%, 1.5px);
+}
+
+.footer__underline {
+  @include gradient-line(100%, 1.5px);
+}

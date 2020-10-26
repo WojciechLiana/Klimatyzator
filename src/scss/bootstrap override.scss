@@ -1,0 +1,42 @@
+@import "custom-variables";
+
+@mixin font($weight, $size){
+  font-weight: $weight;
+  font-size: $size;
+  font-family: "Poppins", sans-serif;
+}
+
+.navbar-light .navbar-nav .nav-link {
+  @include font(400, 20px);
+  width: 144px;
+  color: $secondary;
+}
+
+.navbar-light .navbar-nav .nav-link:hover {
+  @include font(600, 22px);
+  color: #ffffff;
+  background-image: linear-gradient(-90deg, #1ad6fd 0%, #1d62f0 100%);
+  filter: drop-shadow(0px 10px 11.5px rgba(27, 160, 247, 0.5));
+}
+
+.navbar-light .navbar-nav .nav-link:focus {
+  @include font(600, 22px);
+  color: $secondary;
+  background-color: $primary;
+  height: 100%;
+  background-image: none;
+  filter: none;
+  border-radius: 0;
+  display: block;
+}
+
+.btn:focus, .btn.focus {
+  box-shadow: none;
+}
+
+@media only screen and (min-width: 992px) {
+
+  .navbar-light .navbar-nav .nav-link:focus {
+    line-height: 120px;
+  }
+}
